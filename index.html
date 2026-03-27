@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Veloxis Player</title>
+    <title>Veloxis | Flight Ready</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="main-container">
         <div class="top-nav">
-            <input type="text" id="epSearch" placeholder="Search for any movie or TV show...">
+            <h1 class="logo">VELOXIS</h1>
+            <input type="text" id="epSearch" placeholder="Search for Supernatural or any show...">
             <div id="searchResults" class="results-box"></div>
 
             <div class="player-controls">
                 <select id="seasonSelect"><option value="">Season</option></select>
                 <select id="episodeSelect" disabled><option value="">Episode</option></select>
-                <button id="fullscreenBtn">⛶ FULLSCREEN</button>
+                
+                <select id="qualitySelect">
+                    <option value="1080">1080p (Best)</option>
+                    <option value="720" selected>720p (Ideal)</option>
+                    <option value="360">360p (Save Space)</option>
+                </select>
+
+                <button id="fullscreenBtn">⛶ THEATER</button>
+                <button id="downloadBtn">✈️ FLIGHT DOWNLOAD</button>
             </div>
         </div>
 
@@ -24,11 +32,10 @@
             <div id="videoContainer"></div>
         </div>
 
-        <div style="text-align: center; padding-bottom: 50px;">
+        <div class="bottom-bar">
             <button id="nextBtn">NEXT EPISODE →</button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
